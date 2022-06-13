@@ -30,7 +30,6 @@ class EmployeesListItem extends Component {
 		if (like) {
 			classNames += " like";
 		}
-		console.log(classNames);
 		return (
 			<li className={classNames}>
 				<span className="list-group-item-label" onClick={this.onLike}>

@@ -21,8 +21,10 @@ class App extends Component {
 				{ name: "Сергей Подольцев", salary: 850, increase: false, id: 7 },
 				{ name: "Илья Гонтмахер", salary: 900, increase: true, id: 8 },
 				{ name: "Сергей Романченко", salary: 1200, increase: false, id: 9 },
+				{ name: "Елена Свиноиващенко", salary: 90, increase: false, id: 10 },
 			]
 		}
+		this.maxId = 11;
 	}
 
 	deleteItem = (id) => {
@@ -33,8 +35,19 @@ class App extends Component {
 		})
 	}
 
-	addItem = () => {
-		console.log('Test');
+	addItem = (name, salary) => {
+		const newItem = {
+			name,
+			salary,
+			increase: false,
+			id: this.maxId++
+		}
+		this.setState(({ data }) => {
+			const newArr = [...data, newItem]
+			return {
+				data: newArr
+			}
+		});
 	}
 
 	render() {
