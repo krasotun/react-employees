@@ -16,10 +16,11 @@ class EmployeesAddForm extends Component {
 		});
 	};
 
-	onSubmit(event) {
+	onSubmit = (event) => {
 		event.preventDefault();
-		// console.log(this.props);
+		this.props.onAdd();
 	}
+
 	render() {
 		const { name, salary } = this.state;
 		return (

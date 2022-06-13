@@ -33,7 +33,7 @@ class App extends Component {
 		})
 	}
 
-	addItem() {
+	addItem = () => {
 		console.log('Test');
 	}
 
