@@ -1,7 +1,4 @@
 import "./app-filter.css";
-const foo = 123;
-console.log(foo);
-
 const AppFilter = () => {
 	return (
 		<div className="btn-group">
@@ -17,5 +14,4 @@ const AppFilter = () => {
 		</div>
 	);
 };
-
 export default AppFilter;
